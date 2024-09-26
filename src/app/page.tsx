@@ -1,95 +1,41 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client'
+import React from 'react';
+import { useQuery } from '@tanstack/react-query';
+import ProductHeader from './components/common/ProductHeader';
+import ProductImage from './components/common/ProductImage';
+import ProductDescription from './components/common/ProductDescription';
+import ChainCustomizer from './components/common/ChainCustomizer';
+import StyleSelector from './components/common/StyleSelector';
+import MetalSelector from './components/common/MetalSelector';
+import DetailsAccordion from './components/common/DetailsAccordion';
+import MaterialAccordion from './components/common/MaterialAccordion';
+import PriceDisplay from './components/common/PriceDisplay';
+import AddToCartButton from './components/common/AddToCartButton';
+import ProductGallery from './components/common/ProductGallery';
+import RelatedProducts from './components/common/RelatedProducts';
 
-export default function Home() {
+const ProductPage: React.FC = () => {
+  // const { data: productData, isLoading, error } = useQuery('productData', fetchProductData);
+
+  // if (isLoading) return <div>Loading...</div>;
+  // if (error) return <div>Error loading product data</div>;
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+    <div className="product-page">
+      <ProductHeader name="Product Name" />
+      <ProductImage src="product-image.jpg" />
+      <ProductDescription description="Product Description" />
+      <ChainCustomizer options={["Left Chain", "Right Chain"]} />
+      <StyleSelector styles={["Style 1", "Style 2", "Style 3"]} />
+      <MetalSelector key="metal-selector" />
+      <DetailsAccordion />
+      <MaterialAccordion />
+      <PriceDisplay price={100} />
+      <AddToCartButton />
+      <ProductGallery images={["image1.jpg", "image2.jpg", "image3.jpg"]} />
+      <RelatedProducts products={[{ id: 1, name: "Product 1", image: "image1.jpg" }, { id: 2, name: "Product 2", image: "image2.jpg" }, { id: 3, name: "Product 3", image: "image3.jpg" }]} />
     </div>
   );
-}
+};
+
+export default ProductPage;
