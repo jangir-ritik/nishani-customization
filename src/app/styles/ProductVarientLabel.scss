@@ -1,0 +1,21 @@
+.product-varient-label-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+
+    button {
+        padding: 12px 24px;
+        border: none;
+        cursor: pointer;
+        background-color: transparent;
+        font-size: 12px;
+        color: #00000040;
+
+        &.selected {
+            text-decoration: underline;
+            color: #000;
+        }
+    }
+}

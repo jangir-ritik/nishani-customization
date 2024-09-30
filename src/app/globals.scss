@@ -1,0 +1,41 @@
+@import "./styles/ProductImage.scss";
+@import "./styles/ProductGallery.scss";
+@import "./styles/ProductHeader.scss";
+@import "./styles/ProductDescription.scss";
+@import "./styles/StyleSelector.scss";
+@import "./styles/MetalSelector.scss";
+@import "./styles/PriceDisplay.scss";
+@import "./styles/AddToCartButton.scss";
+@import "./styles/MaterialAccordion.scss";
+@import "./styles/DetailsAccordion.scss";
+@import "./styles/ChainCustomizer.scss";
+@import "./styles/ProductVarientLabel.scss";
+
+.product-customization-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  gap: 24px;
+  padding: 80px;
+
+  .product-customization-page-right-section {
+    display: flex;
+    flex-direction: column;
+
+    .product-customization-page-right-style-metal-selector-wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin: 24px 0px;
+    }
+
+    .product-customization-page-right-price-add-to-cart-wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 85px;
+    }
+  }
+}

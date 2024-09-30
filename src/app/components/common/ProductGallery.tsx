@@ -1,13 +1,15 @@
 import React from "react";
 import Image from "next/image";
-import productImage from "../../assets/pngs/view-container.png";
+import productImage1 from "../../assets/pngs/product-view-1.png";
+import productImage2 from "../../assets/pngs/product-view-2.png";
 
 const ProductGallery: React.FC<{ images: string[] }> = ({ images }) => (
-    <div className="product-gallery">
+    <div className="product-gallery-container">
         {/* {images.map((src, index) => (
                 <img key={index} src={src} alt={`Product view ${index + 1}`} />
             ))} */}
-        <Image src={productImage} alt={`Product view`} />
+        <Image src={productImage1} alt={`Product view 1`} className="product-gallery-image" />
+        <Image src={productImage2} alt={`Product view 2`} className="product-gallery-image" />
     </div>
 );
 

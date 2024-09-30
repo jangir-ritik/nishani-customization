@@ -12,7 +12,6 @@ import MaterialAccordion from './components/common/MaterialAccordion';
 import PriceDisplay from './components/common/PriceDisplay';
 import AddToCartButton from './components/common/AddToCartButton';
 import ProductGallery from './components/common/ProductGallery';
-import RelatedProducts from './components/common/RelatedProducts';
 
 const ProductPage: React.FC = () => {
   // const { data: productData, isLoading, error } = useQuery('productData', fetchProductData);
@@ -21,19 +20,28 @@ const ProductPage: React.FC = () => {
   // if (error) return <div>Error loading product data</div>;
 
   return (
-    <div className="product-page">
-      <ProductHeader name="Product Name" />
-      <ProductImage src="product-image.jpg" />
-      <ProductDescription description="Product Description" />
-      <ChainCustomizer options={["Left Chain", "Right Chain"]} />
-      <StyleSelector styles={["Style 1", "Style 2", "Style 3"]} />
-      <MetalSelector key="metal-selector" />
-      <DetailsAccordion />
-      <MaterialAccordion />
-      <PriceDisplay price={100} />
-      <AddToCartButton />
-      <ProductGallery images={["image1.jpg", "image2.jpg", "image3.jpg"]} />
-      <RelatedProducts products={[{ id: 1, name: "Product 1", image: "image1.jpg" }, { id: 2, name: "Product 2", image: "image2.jpg" }, { id: 3, name: "Product 3", image: "image3.jpg" }]} />
+    <div className="product-customization-page">
+      {/* Left Section */}
+      <div>
+        <ProductImage src="product-image.jpg" />
+        <ProductGallery images={["image1.jpg", "image2.jpg", "image3.jpg"]} />
+      </div>
+      {/* Right Section */}
+      <div className="product-customization-page-right-section">
+        <ProductHeader name="Product Name" />
+        <ProductDescription description="Product Description" />
+        <ChainCustomizer options={["Left Chain", "Right Chain"]} />
+        <div className="product-customization-page-right-style-metal-selector-wrapper">
+          <StyleSelector style="Style 1" />
+          <MetalSelector key="metal-selector" />
+        </div>
+        <DetailsAccordion />
+        <MaterialAccordion />
+        <div className="product-customization-page-right-price-add-to-cart-wrapper">
+          <PriceDisplay price={100} />
+          <AddToCartButton />
+        </div>
+      </div>
     </div>
   );
 };
