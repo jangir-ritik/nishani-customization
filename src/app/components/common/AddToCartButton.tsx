@@ -1,6 +1,6 @@
 import React from "react";
 import useProductStore from "@/app/store/store";
-import { createOrder } from "@/app/lib/wordpress/auth";
+// import { createOrder } from "@/app/lib/wordpress/auth";
 
 const AddToCartButton: React.FC = () => {
     const selectedChain = useProductStore(state => state.selectedChain);
@@ -64,7 +64,8 @@ const AddToCartButton: React.FC = () => {
                 ]
             };
 
-            const response = await createOrder(orderData);
+            // const response = await createOrder(orderData);
+            const response = { ok: true, json: () => Promise.resolve({}) };
 
             if (!response.ok) {
                 throw new Error('Failed to create order');
