@@ -12,8 +12,10 @@ import PriceDisplay from './components/common/PriceDisplay';
 import AddToCartButton from './components/common/AddToCartButton';
 import ProductGallery from './components/common/ProductGallery';
 import UserProfile from './components/common/GetUser';
+import { useMedia } from './utils/useMedia';
 
 const ProductPage: React.FC = () => {
+  const { isMobile } = useMedia();
   // const { data: productData, isLoading, error } = useQuery('productData', fetchProductData);
 
   // if (isLoading) return <div>Loading...</div>;

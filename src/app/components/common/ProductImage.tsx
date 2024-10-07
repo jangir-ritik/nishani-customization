@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import useProductStore from "@/app/store/store";
-import productImage from "../../assets/pngs/view-container.png";
+import productImage from "@/public/pngs/view-container.png";
 
 const ProductImage: React.FC = () => {
     const selectedLeftChainModel = useProductStore(state => state.selectedLeftChainModel);

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import AddIcon from "@/public/icons/add.svg";
-import MinusIcon from "@/public/icons/minus.svg";
+import AddIcon from "../../../../public/icons/add.svg";
+import MinusIcon from "../../../../public/icons/minus.svg";
 
 const MaterialAccordion: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);

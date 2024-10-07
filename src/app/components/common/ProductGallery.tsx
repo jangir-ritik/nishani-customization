@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import productImage1 from "../../assets/pngs/product-view-1.png";
-import productImage2 from "../../assets/pngs/product-view-2.png";
+import productImage1 from "@/public/pngs/product-view-1.png";
+import productImage2 from "@/public/pngs/product-view-2.png";
 
 const ProductGallery: React.FC = () => (
     <div className="product-gallery-container">
