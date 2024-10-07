@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProductHeader: React.FC<{ name: string }> = ({ name }) => (
+const ProductHeader: React.FC = () => (
     <div className="product-name-header-container">
         {/* <h1>{name}</h1> */}
         <h1>Product Name</h1>

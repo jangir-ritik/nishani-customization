@@ -2,7 +2,8 @@ import React from "react";
 import useProductStore from "@/app/store/store";
 
 const MetalSelector: React.FC = () => {
-    const { selectedMetal, setSelectedMetal } = useProductStore();
+    const selectedMetal = useProductStore(state => state.selectedMetal)
+    const setSelectedMetal = useProductStore(state => state.setSelectedMetal)
 
     return (
         <div className="metal-selector-container">

@@ -1,6 +1,5 @@
 'use client'
 import React from 'react';
-import { useQuery } from '@tanstack/react-query';
 import ProductHeader from './components/common/ProductHeader';
 import ProductImage from './components/common/ProductImage';
 import ProductDescription from './components/common/ProductDescription';
@@ -12,6 +11,7 @@ import MaterialAccordion from './components/common/MaterialAccordion';
 import PriceDisplay from './components/common/PriceDisplay';
 import AddToCartButton from './components/common/AddToCartButton';
 import ProductGallery from './components/common/ProductGallery';
+import UserProfile from './components/common/GetUser';
 
 const ProductPage: React.FC = () => {
   // const { data: productData, isLoading, error } = useQuery('productData', fetchProductData);
@@ -21,24 +21,25 @@ const ProductPage: React.FC = () => {
 
   return (
     <div className="product-customization-page">
+      <UserProfile />
       {/* Left Section */}
-      <div>
-        <ProductImage src="product-image.jpg" />
-        <ProductGallery images={["image1.jpg", "image2.jpg", "image3.jpg"]} />
+      <div className="product-customization-page-left-section">
+        <ProductImage />
+        <ProductGallery />
       </div>
       {/* Right Section */}
       <div className="product-customization-page-right-section">
-        <ProductHeader name="Product Name" />
-        <ProductDescription description="Product Description" />
-        <ChainCustomizer options={["Left Chain", "Right Chain"]} />
+        <ProductHeader />
+        <ProductDescription />
+        <ChainCustomizer />
         <div className="product-customization-page-right-style-metal-selector-wrapper">
-          <StyleSelector style="Style 1" />
+          <StyleSelector />
           <MetalSelector key="metal-selector" />
         </div>
         <DetailsAccordion />
         <MaterialAccordion />
         <div className="product-customization-page-right-price-add-to-cart-wrapper">
-          <PriceDisplay price={100} />
+          <PriceDisplay />
           <AddToCartButton />
         </div>
       </div>
