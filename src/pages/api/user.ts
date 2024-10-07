@@ -33,7 +33,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
         await connection.end();
 
-        if (rows.length > 0) {
+        if (Array.isArray(rows) && rows.length > 0) {
             res.status(200).json(rows[0]);
         } else {
             res.status(404).json({ message: 'User not found' });
