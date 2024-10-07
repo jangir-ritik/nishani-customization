@@ -1,12 +1,17 @@
 import React from "react";
+import ShareIcon from "@/public/icons/share.svg";
+import FavoriteIcon from "@/public/icons/heart.svg";
 
 const ProductHeader: React.FC = () => (
     <div className="product-name-header-container">
-        {/* <h1>{name}</h1> */}
         <h1>Product Name</h1>
         <div className="product-header-actions">
-            <button>Share</button>
-            <button>Favorite</button>
+            <button>
+                <ShareIcon />
+            </button>
+            <button>
+                <FavoriteIcon />
+            </button>
         </div>
     </div>
 );

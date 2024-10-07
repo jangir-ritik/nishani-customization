@@ -19,7 +19,7 @@ function ProductVarientModel() {
                     {leftChainModels.map((model, index) => (
                         <div 
                             key={index} 
-                            className={`left-chain-model ${selectedLeftChainModel === index ? 'selected' : ''}`}
+                            className={`left-chain-model ${selectedLeftChainModel === index ? 'selected' : 'default'}`}
                             onClick={() => handleLeftChainModelClick(index)}
                         >
                             <Image src={model} alt={`left-chain-model-${index + 1}`} />

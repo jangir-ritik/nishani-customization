@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-
+import AddIcon from '@/public/icons/add.svg'
+import MinusIcon from '@/public/icons/minus.svg'
 const DetailsAccordion: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -7,7 +8,7 @@ const DetailsAccordion: React.FC = () => {
         <div className="details-accordion-wrapper">
             <button onClick={() => setIsOpen(!isOpen)} className="details-accordion-button">
                 Details
-                <span>{isOpen ? "-" : "+"}</span>
+                {isOpen ? <MinusIcon /> : <AddIcon />}
             </button>
             {isOpen && <div className="accordion-content">Product details here...</div>}
         </div>
