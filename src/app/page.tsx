@@ -13,6 +13,8 @@ import AddToCartButton from './components/common/AddToCartButton';
 import ProductGallery from './components/common/ProductGallery';
 import UserProfile from './components/common/GetUser';
 import { useMedia } from './utils/useMedia';
+import ExperienceWrapper from './components/common/experience/ExperienceWrapper';
+import Experience from './components/common/experience/Experience';
 
 const ProductPage: React.FC = () => {
   const { isMobile } = useMedia();
@@ -26,7 +28,10 @@ const ProductPage: React.FC = () => {
       {/* <UserProfile /> */}
       {/* Left Section */}
       <div className="product-customization-page-left-section">
-        <ProductImage />
+        <ExperienceWrapper>
+          <Experience />
+        </ExperienceWrapper>
+        {/* <ProductImage /> */}
         <ProductGallery />
       </div>
       {/* Right Section */}

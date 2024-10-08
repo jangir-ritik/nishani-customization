@@ -22,7 +22,12 @@
     "react-responsive": "^10.0.0",
     "sass": "^1.79.3",
     "sharp": "^0.33.5",
-    "zustand": "^5.0.0-rc.2"
+    "zustand": "^5.0.0-rc.2",
+    "@react-three/drei": "^9.112.0",
+    "@react-three/fiber": "^8.17.7",
+    "leva": "0.9.34",
+    "r3f-perf": "^7.2.1",
+    "three": "^0.168.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",

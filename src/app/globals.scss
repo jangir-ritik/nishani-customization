@@ -21,9 +21,15 @@
   padding: 40px 80px;
 
   .product-customization-page-left-section {
+    overflow: hidden;
     display: flex;
     flex-direction: column;
+    min-width: 50%;
     gap: 24px;
+
+    #experience-canvas {
+      height: 500px;
+    }
   }
 
   .product-customization-page-right-section {
