@@ -1,5 +1,6 @@
 import mysql from 'mysql2/promise';
 import { NextApiRequest, NextApiResponse } from 'next';
+import { RowDataPacket } from 'mysql2';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     const dbConfig = {
@@ -29,7 +30,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         const [rows] = await connection.execute(
             'SELECT * FROM `luxria_users` WHERE id = ?',
             [userId]
-        );
+        ) as [RowDataPacket[], any];
 
         await connection.end();
 
