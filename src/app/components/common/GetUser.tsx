@@ -9,7 +9,7 @@ const UserProfile: React.FC = () => {
         const fetchUserId = async () => {
             try {
                 setIsLoading(true);
-                const response = await fetch('/api/getCurrentUser', {
+                const response = await fetch('/api/get-current-user', {
                     headers: {
                         'Cache-Control': 'no-cache',
                         'Pragma': 'no-cache'
