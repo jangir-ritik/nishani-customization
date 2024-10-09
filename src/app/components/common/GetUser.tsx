@@ -13,7 +13,7 @@ const UserProfile = ({ initialUserId }: UserProfileProps) => {
     useEffect(() => {
         const fetchUserId = async () => {
             try {
-                const response = await fetch('/api/getCurrentUser');
+                const response = await fetch('/api/get-current-user');
                 const data = await response.json();
                 if (data.userId) {
                     setUserId(data.userId);
