@@ -25,7 +25,7 @@ const ProductPage: React.FC = () => {
 
   return (
     <div className="product-customization-page">
-      <UserProfile />
+      <UserProfile initialUserId={null} />
       {/* Left Section */}
       <div className="product-customization-page-left-section">
         <ExperienceWrapper>
