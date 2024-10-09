@@ -1,27 +1,24 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
+import { NextApiRequest, NextApiResponse } from 'next';
 
-type User = {
-    id: string
-}
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+    if (req.method !== 'POST') {
+        return res.status(405).json({ message: 'Method not allowed' });
+    }
 
-export default async function handler(
-    req: NextApiRequest,
-    res: NextApiResponse
-) {
-    if (req.method === 'GET') {
-        const { userId } = req.query
+    try {
+        const { userId } = req.body;
 
-        if (!userId || typeof userId !== 'string') {
-            return res.status(400).json({ error: 'Invalid user ID' })
+        if (!userId) {
+            return res.status(400).json({ message: 'User ID is required' });
         }
-        console.log(userId);
-        const mockUser: User = {
-            id: userId
-        }
-        console.log(mockUser);
-        return res.status(200).json(mockUser)
-    } else {
-        res.setHeader('Allow', ['GET'])
-        res.status(405).end(`Method ${req.method} Not Allowed`)
+
+        // Do something with the userId
+        console.log('Received userId:', userId);
+
+        // Return a success response
+        res.status(200).json({ message: 'User ID received successfully' });
+    } catch (error) {
+        console.error('Error processing request:', error);
+        res.status(500).json({ message: 'Internal server error' });
     }
 }
