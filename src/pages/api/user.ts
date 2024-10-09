@@ -1,3 +1,4 @@
+// pages/api/user.js
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -12,13 +13,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             return res.status(400).json({ message: 'User ID is required' });
         }
 
-        // Do something with the userId
         console.log('Received userId:', userId);
 
-        // Return a success response
-        res.status(200).json({ message: 'User ID received successfully' });
-    } catch (error) {
+        // Fetch user data using the WooCommerce REST API
+        const response = await fetch(
+            `https://nishanistudio.com/wp-json/wc/v3/customers/${userId}`,
+            {
+                headers: {
+                    'Authorization': 'Basic ' + Buffer.from('ck_96d94f775b205d983c24968ee9054914dcb3a00b:cs_18884552606f1cd6e53c0bb6a3ecc18b1dfd98d0').toString('base64')
+                }
+            }
+        );
+
+        const userData = await response.json();
+
+        res.status(200).json(userData);
+    } catch (error: any) {
         console.error('Error processing request:', error);
-        res.status(500).json({ message: 'Internal server error' });
+        res.status(500).json({ message: 'Internal server error', error: error.message });
     }
 }

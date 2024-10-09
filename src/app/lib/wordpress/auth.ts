@@ -1,7 +1,6 @@
 "use client"
 import WooCommerceRestApi from "@woocommerce/woocommerce-rest-api";
 import axios from "axios";
-import { useEffect } from "react";
 
 const customAxiosInstance = axios.create({
     headers: {
