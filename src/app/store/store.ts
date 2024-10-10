@@ -9,8 +9,11 @@ interface ChainPartState {
 interface ProductStore {
   selectedChainPart: string;
   chainParts: Record<string, ChainPartState>;
+  selectedChainPartModel: number | null;
+  chainPartModels: string[];
   setSelectedChainPart: (part: string) => void;
   setChainPartMetal: (part: string, metal: Metal) => void;
+  setSelectedChainPartModel: (index: number | null) => void;
 }
 
 const useProductStore = create<ProductStore>((set) => ({
@@ -21,6 +24,8 @@ const useProductStore = create<ProductStore>((set) => ({
     Hooktop: { metal: 'silver', label: 'Front Lock' },
     HookBotm: { metal: 'gold', label: 'Back Lock' },
   },
+  selectedChainPartModel: null,
+  chainPartModels: ['/path/to/model1.png', '/path/to/model2.png', '/path/to/model3.png'],
   setSelectedChainPart: (part) => set({ selectedChainPart: part }),
   setChainPartMetal: (part, metal) => set((state) => ({
     chainParts: {
@@ -28,6 +33,7 @@ const useProductStore = create<ProductStore>((set) => ({
       [part]: { ...state.chainParts[part], metal },
     },
   })),
+  setSelectedChainPartModel: (index) => set({ selectedChainPartModel: index }),
 }));
 
 export default useProductStore;
