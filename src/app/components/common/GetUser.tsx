@@ -28,8 +28,8 @@ const UserProfile: React.FC = () => {
         fetchUserId();
 
         // Optional: Set up polling if needed
-        const interval = setInterval(fetchUserId, 5000);
-        return () => clearInterval(interval);
+        // const interval = setInterval(fetchUserId, 5000);
+        // return () => clearInterval(interval);
     }, []);
 
     if (isLoading) return <div>Loading user data...</div>;
