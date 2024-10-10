@@ -1,12 +1,10 @@
 import React from "react";
-import ProductVarientLabel from "./ProductVarientLabel";
-import ProductVarientModel from "./ProductVarientModel";
+import ProductVariantLabel from "./ProductVariantLabel";
 
 const ChainCustomizer = () => {
     return (
         <div className="chain-customizer-container">
-            <ProductVarientLabel options={['Left Chain', 'Front Lock', 'Right Chain', 'Back Lock', 'Charm', 'Additional Chain']} />
-            <ProductVarientModel />
+            <ProductVariantLabel />
         </div>
     );
 };

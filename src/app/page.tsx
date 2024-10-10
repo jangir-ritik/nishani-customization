@@ -11,30 +11,16 @@ import MaterialAccordion from './components/common/MaterialAccordion';
 import PriceDisplay from './components/common/PriceDisplay';
 import AddToCartButton from './components/common/AddToCartButton';
 import ProductGallery from './components/common/ProductGallery';
-import UserProfile from './components/common/GetUser';
-import { useMedia } from './utils/useMedia';
-import ExperienceWrapper from './components/common/experience/ExperienceWrapper';
-import Experience from './components/common/experience/Experience';
+import ChainDemo from './components/common/experience/ChainDemo';
 
 const ProductPage: React.FC = () => {
-  const { isMobile } = useMedia();
-  // const { data: productData, isLoading, error } = useQuery('productData', fetchProductData);
-
-  // if (isLoading) return <div>Loading...</div>;
-  // if (error) return <div>Error loading product data</div>;
 
   return (
     <div className="product-customization-page">
-      {/* <UserProfile /> */}
-      {/* Left Section */}
       <div className="product-customization-page-left-section">
-        <ExperienceWrapper>
-          <Experience />
-        </ExperienceWrapper>
-        {/* <ProductImage /> */}
+        <ChainDemo />
         <ProductGallery />
       </div>
-      {/* Right Section */}
       <div className="product-customization-page-right-section">
         <ProductHeader />
         <ProductDescription />

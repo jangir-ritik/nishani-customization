@@ -8,7 +8,7 @@ const StyleSelector: React.FC = () => {
         <div className="style-selector-container">
             <p className="style-selector-label">
                 {/* Styles: <span className="style-selector-value">{style}</span> */}
-                Model: <span className="style-selector-value">{`Model ${(selectedLeftChainModel ?? 0) + 1}`}</span>
+                Style: <span className="style-selector-value">{`Model ${(selectedLeftChainModel ?? 0) + 1}`}</span>
                 {/* {selectedLeftChainModel !== null && (
                 )} */}
             </p>

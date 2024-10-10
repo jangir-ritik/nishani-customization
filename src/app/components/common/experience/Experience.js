@@ -7,10 +7,11 @@ import { OrbitControls, useHelper, PivotControls, useGLTF, useAnimations } from 
 import { Perf } from 'r3f-perf'
 import Model from './Model'
 import useProductStore from '@/app/store/store'
+import Model007 from './Model007'
 
 
 function Experience() {
-  useGLTF.preload('/Elements3.gltf')
+  useGLTF.preload('/element007.gltf')
 
   const directionalLightRef = useRef();
   const selectedMetal = useProductStore(state => state.selectedMetal)
@@ -52,12 +53,13 @@ function Experience() {
       <directionalLight
         ref={directionalLightRef}
         position={[0, 2, 3]}
-        intensity={3}
+        intensity={5}
         color={'#fff'}
       />
-      <ambientLight intensity={1} />
+      <ambientLight intensity={3} />
       <Suspense fallback={null}>
-        <Model metalColor={selectedMetal} selectedChain={selectedChain} />
+        <Model007 metalColor={selectedMetal} selectedChain={selectedChain}  />
+        {/* <Model metalColor={selectedMetal} selectedChain={selectedChain} /> */}
       </Suspense>
     </>
   )

@@ -5,7 +5,7 @@ import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 function ExperienceWrapper({ children }) {
-    useGLTF.preload('/Elements3.gltf')
+    useGLTF.preload('/element007.gltf')
     const cameraSettings = {
         fov: 45,
         near: 0.1,

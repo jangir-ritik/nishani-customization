@@ -1,0 +1,388 @@
+[
+    {
+        "id": "N-CSTLCK-10201",
+        "price": 2500,
+        "name": "Half studded lock",
+        "description": "Unlock endless possibilities with our openable locks. Half studded and half plain, this unique design brings a perfect blend of simplicity and sparkle. This lock is the ultimate accessory to customize your jewelry collection. Available in yellow gold and rhodium finishes, it pairs effortlessly with any of our studio pieces, giving you the freedom to mix, match, and create your own statement looks. Whether you're designing a necklace or a bracelet, this lock adds that extra touch of bling to elevate your style. Perfect for those who love to experiment with their jewelry.",
+        "material": "Sterling Silver 925",
+        "plating": [
+            {
+                "type": "14 KT Yellow Gold",
+                "anti_tarnish": true,
+                "size": {
+                    "height": 20,
+                    "length": 8
+                },
+                "stone": "white CZ"
+            },
+            {
+                "type": "Rhodium",
+                "anti_tarnish": true,
+                "size": {
+                    "height": 20,
+                    "length": 8
+                },
+                "stone": "White CZ"
+            }
+        ]
+    },
+    {
+        "id": "N-CSTLCK-10202",
+        "price": 2200,
+        "name": "Octagonal lock",
+        "description": "For those who love understated elegance, our high-finish octagonal lock is the perfect choice. Its bold geometric shape offers a modern edge, while the smooth, polished surface makes it a versatile addition to any jewelry collection. Pair it with our studio pieces to create sleek, contemporary designs - whether it's for necklaces or bracelets. This lock is designed to add subtle sophistication to your look, no extra sparkle needed. Available in yellow gold and rhodium finishes.",
+        "material": "Sterling Silver 925",
+        "plating": [
+            {
+                "type": "14 KT Yellow Gold",
+                "anti_tarnish": true,
+                "size": {
+                    "height": 20,
+                    "length": 8
+                },
+                "stone": null
+            },
+            {
+                "type": "Rhodium",
+                "anti_tarnish": true,
+                "size": {
+                    "height": 20,
+                    "length": 8
+                },
+                "stone": null
+            }
+        ]
+    },
+    {
+        "id": "N-CSTLCK-10203",
+        "price": 2300,
+        "name": "Hexagonal textured lock",
+        "description": "Add a touch of character to your jewelry with our hexagonal hammered lock. The unique texture gives this geometric piece a rugged yet refined finish, making it a standout addition to any necklace or bracelet. Perfect for mixing and matching with our studio pieces, it brings an artisanal feel and modern edge to your custom designs. Available in yellow gold and rhodium finishes.",
+        "material": "Sterling Silver 925",
+        "plating": [
+            {
+                "type": "14 KT Yellow Gold",
+                "anti_tarnish": true,
+                "size": {
+                    "height": 20,
+                    "length": 8
+                },
+                "stone": null
+            },
+            {
+                "$type$": "Rhodium",
+                "$anti_tarnish$": "true",
+                "$size$": {
+                    "height": "20mm",
+                    "length": "8mm"
+                },
+                "$stone$": "White CZ"
+            }
+        ]
+    },
+    {
+        "id": "N-CSTLCK-10204",
+        "price": 2000,
+        "name": "Signature Matte finish lock",
+        "description": "Embrace understated elegance with our signature matte finish lock. Its smooth, velvety texture gives a refined and contemporary look, perfect for those who prefer a subtle, modern aesthetic. Designed to mix and match with any of our studio pieces, this lock adds a quiet sophistication to both necklaces and bracelets. Available in yellow gold and rhodium finishes, it's ideal for creating minimalist, sleek jewelry combinations.",
+        "material": "Sterling Silver 925",
+        "plating": [
+            {
+                "type": "14 KT Yellow Gold",
+                "anti_tarnish": true,
+                "size": {
+                    "height": "20mm",
+                    "length": "8mm"
+                },
+                "stone": null
+            },
+            {
+                "type": "Rhodium",
+                "anti_tarnish": true,
+                "size": {
+                    "height": "20mm",
+                    "length": "8mm"
+                },
+                "stone": null
+            }
+        ]
+    },
+    {
+        "id": "N-CSTLCK-10205",
+        "price": 1900,
+        "name": "Signature lock",
+        "description": "Shine bright with our signature high polish lock, designed to bring a bold, reflective finish to your jewelry collection. The smooth, gleaming surface adds a touch of luxury to any necklace or bracelet, making it the perfect accessory for those who love a high-shine look. Pair it with any of our studio pieces to create custom designs that catch the light and make a statement. Available in yellow gold and rhodium finishes.",
+        "material": "Sterling Silver 925",
+        "plating": [
+            {
+                "type": "14 KT Yellow Gold",
+                "anti_tarnish": true,
+                "size": {
+                    "height": "20mm",
+                    "length": "8mm"
+                },
+                "stone": null
+            },
+            {
+                "type": "Rhodium",
+                "anti_tarnish": true,
+                "size": {
+                    "height": "20mm",
+                    "length": "8mm"
+                },
+                "stone": null
+            }
+        ]
+    },
+    {
+        "id": "N-CSTLCK-011",
+        "price": 3300,
+        "name": "Signature diamond-cut chain (Small)",
+        "description": "Our signature diamond-cut handmade chain is designed to make a statement. With its bold, link-shaped design and precision craftsmanship, this chain brings a striking elegance to both necklaces and bracelets. Available in two sizes- small and medium- and finishes—yellow gold and rhodium—it's perfect for those who love versatile, standout pieces that transition seamlessly from day to night. Whether worn alone or layered, this chain adds a touch of luxury to any look.",
+        "material": "Sterling Silver 925",
+        "plating": [
+            {
+                "type": "14 KT Yellow Gold",
+                "anti_tarnish": true,
+                "size": {
+                    "length": "3 inch"
+                },
+                "stone": null
+            },
+            {
+                "type": "Rhodium",
+                "anti_tarnish": true,
+                "size": {
+                    "length": "3 inch"
+                },
+                "stone": null
+            }
+        ]
+    },
+    {
+        "id": "N-CSTLCK-012",
+        "price": 6500,
+        "name": "Signature diamond-cut chain (Small)",
+        "description": "Our signature diamond-cut handmade chain is designed to make a statement. With its bold, link-shaped design and precision craftsmanship, this chain brings a striking elegance to both necklaces and bracelets. Available in two sizes- small and medium- and finishes—yellow gold and rhodium—it's perfect for those who love versatile, standout pieces that transition seamlessly from day to night. Whether worn alone or layered, this chain adds a touch of luxury to any look.",
+        "material": "Sterling Silver 925",
+        "plating": [
+            {
+                "type": "14 KT Yellow Gold",
+                "anti_tarnish": true,
+                "size": {
+                    "length": "6.8 inch"
+                },
+                "stone": null
+            },
+            {
+                "type": "Rhodium",
+                "anti_tarnish": true,
+                "size": {
+                    "length": "6.8 inch"
+                },
+                "stone": null
+            }
+        ]
+    },
+    {
+        "id": "N-CSTLCK-015",
+        "price": 4500,
+        "name": "Signature diamond-cut chain (Medium)",
+        "description": "Our signature diamond-cut handmade chain is designed to make a statement. With its bold, link-shaped design and precision craftsmanship, this chain brings a striking elegance to both necklaces and bracelets. Available in two sizes- small and medium- and finishes—yellow gold and rhodium—it's perfect for those who love versatile, standout pieces that transition seamlessly from day to night. Whether worn alone or layered, this chain adds a touch of luxury to any look.",
+        "material": "Sterling Silver 925",
+        "plating": [
+            {
+                "type": "14 KT Yellow Gold",
+                "anti_tarnish": true,
+                "size": {
+                    "length": "3 inch"
+                },
+                "stone": null
+            },
+            {
+                "type": "Rhodium",
+                "anti_tarnish": true,
+                "size": {
+                    "length": "3 inch"
+                },
+                "stone": null
+            }
+        ]
+    },
+    {
+        "id": "N-CSTLCK-018",
+        "price": 8800,
+        "name": "Signature diamond-cut chain (Medium)",
+        "description": "Our signature diamond-cut handmade chain is designed to make a statement. With its bold, link-shaped design and precision craftsmanship, this chain brings a striking elegance to both necklaces and bracelets. Available in two sizes- small and medium- and finishes—yellow gold and rhodium—it's perfect for those who love versatile, standout pieces that transition seamlessly from day to night. Whether worn alone or layered, this chain adds a touch of luxury to any look.",
+        "material": "Sterling Silver 925",
+        "plating": [
+            {
+                "type": "14 KT Yellow Gold",
+                "anti_tarnish": true,
+                "size": {
+                    "length": "6.8 inch"
+                },
+                "stone": "none"
+            },
+            {
+                "type": "Rhodium",
+                "anti_tarnish": "true",
+                "size": {
+                    "length": "6.8 inch"
+                },
+                "stone": "none"
+            }
+        ]
+    },
+    {
+        "id": "PL-400",
+        "price": 2300,
+        "name": "Ball chain",
+        "description": "Stay on-trend with our ball chain, a must-have for any modern jewelry collection. Its sleek, spherical design adds a touch of fashionable minimalism to any look, making it perfect for both necklaces and bracelets. This chain is everyone's go-to for effortless style, available in yellow gold and rhodium finishes. Whether you're dressing up or keeping it casual, the ball chain brings a chic and versatile edge to your accessories.",
+        "material": "Sterling Silver 925",
+        "plating": [
+            {
+                "type": "14 KT Yellow Gold",
+                "anti_tarnish": true,
+                "size": {
+                    "length": "3 inch"
+                },
+                "stone": null
+            },
+            {
+                "type": "Rhodium",
+                "anti_tarnish": true,
+                "size": {
+                    "length": "3 inch"
+                },
+                "stone": null
+            }
+        ]
+    },
+    {
+        "id": "PL-400",
+        "price": 2300,
+        "name": "Ball chain",
+        "description": "Stay on-trend with our ball chain, a must-have for any modern jewelry collection. Its sleek, spherical design adds a touch of fashionable minimalism to any look, making it perfect for both necklaces and bracelets. This chain is everyone's go-to for effortless style, available in yellow gold and rhodium finishes. Whether you're dressing up or keeping it casual, the ball chain brings a chic and versatile edge to your accessories.",
+        "material": "Sterling Silver 925",
+        "plating": [
+            {
+                "type": "14 KT Yellow Gold",
+                "anti_tarnish": true,
+                "size": {
+                    "length": "3 inch"
+                },
+                "stone": null
+            },
+            {
+                "type": "Rhodium",
+                "anti_tarnish": true,
+                "size": {
+                    "length": "3 inch"
+                },
+                "stone": null
+            }
+        ]
+    },
+    {
+        "id": "PL-400",
+        "price": 4600,
+        "name": "Ball chain",
+        "description": "Stay on-trend with our ball chain, a must-have for any modern jewelry collection. Its sleek, spherical design adds a touch of fashionable minimalism to any look, making it perfect for both necklaces and bracelets. This chain is everyone's go-to for effortless style, available in yellow gold and rhodium finishes. Whether you're dressing up or keeping it casual, the ball chain brings a chic and versatile edge to your accessories.",
+        "material": "Sterling Silver 925",
+        "plating": [
+            {
+                "type": "14 KT Yellow Gold",
+                "anti_tarnish": true,
+                "size": {
+                    "length": "6.8 inch"
+                },
+                "stone": null
+            },
+            {
+                "type": "Rhodium",
+                "anti_tarnish": true,
+                "size": {
+                    "length": "6.8 inch"
+                },
+                "stone": null
+            }
+        ]
+    },
+    {
+        "id": "PL-400",
+        "price": 4600,
+        "name": "Ball chain",
+        "description": "Stay on-trend with our ball chain, a must-have for any modern jewelry collection. Its sleek, spherical design adds a touch of fashionable minimalism to any look, making it perfect for both necklaces and bracelets. This chain is everyone's go-to for effortless style, available in yellow gold and rhodium finishes. Whether you're dressing up or keeping it casual, the ball chain brings a chic and versatile edge to your accessories.",
+        "material": "Sterling Silver 925",
+        "plating": [
+            {
+                "type": "14 KT Yellow Gold",
+                "anti_tarnish": "true",
+                "size": {
+                    "length": "6.8 inch"
+                },
+                "stone": "none"
+            },
+            {
+                "type": "Rhodium",
+                "anti_tarnish": "true",
+                "size": {
+                    "length": "6.8 inch"
+                },
+                "stone": "none"
+            }
+        ]
+    },
+    {
+        "id": "VEHR00130",
+        "price": 2200,
+        "name": "Box chain",
+        "description": "Elevate your style with our rounded box chain. This unique combination marries modern design with classic elegance, creating a stunning accessory that's perfect for any occasion. The rounded box links offer a contemporary edge, while adding a touch of sophistication and femininity. Available in yellow gold and rhodium, this versatile chain can be worn as a necklace or bracelet, effortlessly enhancing any outfit.",
+        "material": "Sterling Silver 925",
+        "plating": [
+            {
+                "type": "14 KT Yellow Gold",
+                "anti_tarnish": true,
+                "size": {
+                    "length": "3 inch"
+                },
+                "stone": null
+            },
+            {
+                "type": "Rhodium",
+                "anti_tarnish": true,
+                "size": {
+                    "length": "3 inch"
+                },
+                "stone": null
+            }
+        ]
+    },
+    {
+        "id": "VEHR00130",
+        "price": 4400,
+        "name": "Box chain with pearls",
+        "description": "Elevate your style with our rounded box chain adorned with lustrous pearls. This unique combination marries modern design with classic elegance, creating a stunning accessory that's perfect for any occasion. The rounded box links offer a contemporary edge, while the pearls add a touch of sophistication and femininity. Available in yellow gold and rhodium, this versatile chain can be worn as a necklace or bracelet, effortlessly enhancing any outfit.",
+        "material": "Sterling Silver 925",
+        "plating": [
+            {
+                "type": "14 KT Yellow Gold",
+                "anti_tarnish": true,
+                "size": {
+                    "length": "6.8 inch"
+                },
+                "stone": "shell pearls"
+            },
+            {
+                "type": "Rhodium",
+                "anti_tarnish": true,
+                "size": {
+                    "length": "6.8 inch"
+                },
+                "stone": null
+            }
+        ]
+    },
+    
+]

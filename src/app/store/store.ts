@@ -1,30 +1,33 @@
-import { create } from 'zustand'
-import { ChainType, Metal } from '../types/types';
-import leftChainModel1 from "@/public/pngs/chain1.png";
-import leftChainModel2 from "@/public/pngs/chain2.png";
-import leftChainModel3 from "@/public/pngs/chain3.png";
-import leftChainModel4 from "@/public/pngs/chain4.png";
-import leftChainModel5 from "@/public/pngs/chain5.png";
-import leftChainModel6 from "@/public/pngs/chain6.png";
+import { create } from 'zustand';
+import { Metal } from '../types/types';
+
+interface ChainPartState {
+  metal: Metal;
+  label: string;
+}
 
 interface ProductStore {
-    selectedChain: ChainType;
-    selectedMetal: Metal;
-    selectedLeftChainModel: number | null;
-    leftChainModels: typeof leftChainModel1[];
-    setSelectedChain: (chain: ChainType) => void;
-    setSelectedMetal: (metal: Metal) => void;
-    setSelectedLeftChainModel: (modelIndex: number | null) => void;
+  selectedChainPart: string;
+  chainParts: Record<string, ChainPartState>;
+  setSelectedChainPart: (part: string) => void;
+  setChainPartMetal: (part: string, metal: Metal) => void;
 }
 
 const useProductStore = create<ProductStore>((set) => ({
-    selectedChain: 'Left Chain',
-    selectedMetal: 'gold',
-    selectedLeftChainModel: null,
-    leftChainModels: [leftChainModel1, leftChainModel2, leftChainModel3, leftChainModel4, leftChainModel5, leftChainModel6],
-    setSelectedChain: (chain) => set({ selectedChain: chain }),
-    setSelectedMetal: (metal) => set({ selectedMetal: metal }),
-    setSelectedLeftChainModel: (modelIndex) => set({ selectedLeftChainModel: modelIndex }),
+  selectedChainPart: 'L1',
+  chainParts: {
+    L1: { metal: 'gold', label: 'Left Chain' },
+    R1: { metal: 'silver', label: 'Right Chain' },
+    Hooktop: { metal: 'silver', label: 'Front Lock' },
+    HookBotm: { metal: 'gold', label: 'Back Lock' },
+  },
+  setSelectedChainPart: (part) => set({ selectedChainPart: part }),
+  setChainPartMetal: (part, metal) => set((state) => ({
+    chainParts: {
+      ...state.chainParts,
+      [part]: { ...state.chainParts[part], metal },
+    },
+  })),
 }));
 
 export default useProductStore;

@@ -4,7 +4,7 @@ import FavoriteIcon from "@/public/icons/heart.svg";
 
 const ProductHeader: React.FC = () => (
     <div className="product-name-header-container">
-        <h1>Product Name</h1>
+        <h1>Curb Chain</h1>
         <div className="product-header-actions">
             <button>
                 <ShareIcon />
