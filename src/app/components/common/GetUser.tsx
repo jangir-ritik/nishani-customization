@@ -1,37 +1,44 @@
 'use client'
-import { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-export default function UserProfile() {
-    const [userData, setUserData] = useState(null);
-    const [loading, setLoading] = useState(true);
+const UserProfile: React.FC = () => {
+    const [userId, setUserId] = useState<string | null>(null);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        async function fetchUserData() {
+        const fetchUserId = async () => {
             try {
-                const response = await fetch('/api/user', {
+                setIsLoading(true);
+                const response = await fetch('/api/get-current-user', {
                     headers: {
-                        'user-id': 'current-user-id', // Replace with actual user ID
-                    },
+                        'Cache-Control': 'no-cache',
+                        'Pragma': 'no-cache'
+                    }
                 });
                 const data = await response.json();
-                setUserData(data);
+                console.log(data);
+                setUserId(data.userId);
             } catch (error) {
-                console.error('Failed to fetch user data:', error);
+                console.error('Error fetching user ID:', error);
             } finally {
-                setLoading(false);
+                setIsLoading(false);
             }
-        }
+        };
 
-        fetchUserData();
+        fetchUserId();
+
+        // Optional: Set up polling if needed
+        const interval = setInterval(fetchUserId, 5000);
+        return () => clearInterval(interval);
     }, []);
 
-    if (loading) return <div>Loading...</div>;
-    if (!userData) return <div>User not found</div>;
+    if (isLoading) return <div>Loading user data...</div>;
 
     return (
         <div>
-            <h1>User Profile</h1>
-            <pre>{JSON.stringify(userData, null, 2)}</pre>
+            <h1>User Id: {userId || 'No user ID available'}</h1>
         </div>
     );
-}
+};
+
+export default UserProfile;

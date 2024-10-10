@@ -12,11 +12,14 @@ import PriceDisplay from './components/common/PriceDisplay';
 import AddToCartButton from './components/common/AddToCartButton';
 import ProductGallery from './components/common/ProductGallery';
 import ChainDemo from './components/common/experience/ChainDemo';
+import UserProfile from './components/common/GetUser';
 
 const ProductPage: React.FC = () => {
 
   return (
     <div className="product-customization-page">
+      <UserProfile />
+      {/* Left Section */}
       <div className="product-customization-page-left-section">
         <ChainDemo />
         <ProductGallery />
