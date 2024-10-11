@@ -31,7 +31,7 @@ export default function GLTFViewer() {
           rotation={[Math.PI / 2, 0, 0]}
           scale={[3.099536, 3.099536, 3.099536]}
           position={[-72.991257, 0.01064, 1.195336]}
-          visible={false}
+          visible={true}
         />
         <mesh
           name="Med_L1"
@@ -58,7 +58,7 @@ export default function GLTFViewer() {
           rotation={[Math.PI / 2, 0, 0]}
           scale={[2.907253, 2.907253, 2.907253]}
           position={[-72.103935, 0.966494, 2.104294]}
-          visible={false}
+          visible={true}
         />
         <mesh
           name="Med_L6"
