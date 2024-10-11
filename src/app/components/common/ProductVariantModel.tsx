@@ -7,6 +7,7 @@ function ProductVariantModel() {
     const selectedChainPartModel = useProductStore(state => state.selectedChainPartModel)
     const setSelectedChainPartModel = useProductStore(state => state.setSelectedChainPartModel)
     const chainPartModels = useProductStore(state => state.chainPartModels)
+    const chainParts = useProductStore(state => state.chainParts)
 
     const handleChainPartModelClick = (index: number) => {
         setSelectedChainPartModel(index === selectedChainPartModel ? null : index)
@@ -14,7 +15,7 @@ function ProductVariantModel() {
 
     return (
         <div className="product-variant-model-container">
-            {selectedChainPart === 'Left Chain' && (
+            {chainParts[selectedChainPart]?.label === 'Left Chain' && (
                 <div className="product-variant-model-left-chain">
                     {chainPartModels.map((model, index) => (
                         <div 
@@ -22,12 +23,12 @@ function ProductVariantModel() {
                             className={`left-chain-model ${selectedChainPartModel === index ? 'selected' : 'default'}`}
                             onClick={() => handleChainPartModelClick(index)}
                         >
-                            <Image src={model} alt={`left-chain-model-${index + 1}`} />
+                            <Image src={model} alt={`left-chain-model-${index + 1}`} width={100} height={100} />
                         </div>
                     ))}
                 </div>
             )}
-            {selectedChainPart === 'Front Lock' && (
+            {chainParts[selectedChainPart]?.label === 'Front Lock' && (
                 <p>This is the front lock of the product.</p>
             )}
             {/* Add more conditions for other chain types */}

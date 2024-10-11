@@ -3,9 +3,9 @@ import useProductStore from "@/app/store/store";
 // import { createOrder } from "@/app/lib/wordpress/auth";
 
 const AddToCartButton: React.FC = () => {
-    const selectedChain = useProductStore(state => state.selectedChain);
-    const selectedMetal = useProductStore(state => state.selectedMetal);
-    const selectedLeftChainModel = useProductStore(state => state.selectedLeftChainModel);
+    const selectedChainPart = useProductStore(state => state.selectedChainPart);
+    const selectedMetal = useProductStore(state => state.chainParts[selectedChainPart].metal);
+    const selectedLeftChainModel = useProductStore(state => state.chainParts[selectedChainPart].label);
 
     const handleAddToCart = async () => {
         try {
@@ -42,7 +42,7 @@ const AddToCartButton: React.FC = () => {
                         meta_data: [
                             {
                                 key: "Chain",
-                                value: selectedChain
+                                value: selectedChainPart
                             },
                             {
                                 key: "Metal",

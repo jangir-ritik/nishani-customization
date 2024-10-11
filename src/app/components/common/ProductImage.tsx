@@ -4,15 +4,15 @@ import useProductStore from "@/app/store/store";
 import productImage from "@/public/pngs/view-container.png";
 
 const ProductImage: React.FC = () => {
-    const selectedLeftChainModel = useProductStore(state => state.selectedLeftChainModel);
-    const selectedChain = useProductStore(state => state.selectedChain);
+    const selectedChainPart = useProductStore(state => state.selectedChainPart);
+    const selectedChainPartLabel = useProductStore(state => state.chainParts[selectedChainPart].label);
     // const leftChainModels = useProductStore(state => state.leftChainModels);
 
     const getContentToDisplay = () => {
-        if (selectedChain === 'Left Chain' && selectedLeftChainModel !== null) {
+        if (selectedChainPartLabel === 'Left Chain') {
             return {
                 type: 'text',
-                content: `Todo Add Model ${selectedLeftChainModel + 1}`
+                content: `Todo Add Model ${selectedChainPart + 1}`
             };
         }
         return {
