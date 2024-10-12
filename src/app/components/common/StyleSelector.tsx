@@ -2,15 +2,14 @@ import React from "react";
 import useProductStore from "@/app/store/store";
 
 const StyleSelector: React.FC = () => {
-    const selectedChainPartModel = useProductStore(state => state.selectedChainPartModel)
+    const { selectedPart, parts } = useProductStore();
+    const selectedModel = parts[selectedPart].selectedModel;
+    const partLabel = parts[selectedPart].label;
 
     return (
         <div className="style-selector-container">
             <p className="style-selector-label">
-                {/* Styles: <span className="style-selector-value">{style}</span> */}
-                Style: <span className="style-selector-value">{`Model ${(selectedChainPartModel ?? 0) + 1}`}</span>
-                {/* {selectedLeftChainModel !== null && (
-                )} */}
+                Style for {partLabel}: <span className="style-selector-value">Model {selectedModel + 1}</span>
             </p>
         </div>
     );

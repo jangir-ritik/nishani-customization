@@ -1,18 +1,26 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Environment } from '@react-three/drei';
-import Presentation from './Presentation';
+import { Environment, Html, PresentationControls, ContactShadows } from '@react-three/drei';
 import Test from './Test';
 
 export default function ChainDemo() {
   return (
-    <div style={{ width: '100%', height: '100vh', position: 'relative' }}>
-      <Canvas shadows camera={{ position: [0, 0, 10], fov: 50 }}>
+    <div style={{ width: '100%', height: '70vh', position: 'relative' }}>
+      <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 300], fov: 50 }}>
         <color attach="background" args={['#f4f0ed']} />
-        {/* <Presentation /> */}
-        <Test />
-        <OrbitControls />
-        <Environment preset="studio" />
+        <Suspense fallback={<Html center>Loading...</Html>}>
+          <PresentationControls
+            global
+            config={{ mass: 2, tension: 500 }}
+            snap={{ mass: 4, tension: 100 }}
+            rotation={[-Math.PI / 2, 0, 0]}
+            polar={[-Math.PI / 3, Math.PI / 3]}
+            azimuth={[-Math.PI / 1.4, Math.PI / 2]}
+            >
+            <Test />
+          </PresentationControls>
+          <Environment preset="studio" environmentRotation={[Math.PI , 0, Math.PI]} />
+        </Suspense>
       </Canvas>
     </div>
   );

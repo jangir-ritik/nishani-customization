@@ -3,9 +3,9 @@ import useProductStore from "@/app/store/store";
 // import { createOrder } from "@/app/lib/wordpress/auth";
 
 const AddToCartButton: React.FC = () => {
-    const selectedChainPart = useProductStore(state => state.selectedChainPart);
-    const selectedMetal = useProductStore(state => state.chainParts[selectedChainPart].metal);
-    const selectedLeftChainModel = useProductStore(state => state.chainParts[selectedChainPart].label);
+    // const selectedChainPart = useProductStore(state => state.selectedChainPart);
+    // const selectedMetal = useProductStore(state => state.chainParts[selectedChainPart].metal);
+    // const selectedLeftChainModel = useProductStore(state => state.chainParts[selectedChainPart].label);
 
     const handleAddToCart = async () => {
         try {
@@ -36,24 +36,24 @@ const AddToCartButton: React.FC = () => {
                     country: "US"
                 },
                 line_items: [
-                    {
-                        product_id: 93, // Replace with actual product ID
-                        quantity: 1,
-                        meta_data: [
-                            {
-                                key: "Chain",
-                                value: selectedChainPart
-                            },
-                            {
-                                key: "Metal",
-                                value: selectedMetal
-                            },
-                            {
-                                key: "Chain Type",
-                                value: selectedLeftChainModel !== null ? `Model ${selectedLeftChainModel + 1}` : 'Not selected'
-                            }
-                        ]
-                    }
+                    // {
+                    //     product_id: 93, // Replace with actual product ID
+                    //     quantity: 1,
+                    //     meta_data: [
+                    //         {
+                    //             key: "Chain",
+                    //             value: selectedChainPart
+                    //         },
+                    //         {
+                    //             key: "Metal",
+                    //             value: selectedMetal
+                    //         },
+                    //         {
+                    //             key: "Chain Type",
+                    //             value: selectedLeftChainModel !== null ? `Model ${selectedLeftChainModel + 1}` : 'Not selected'
+                    //         }
+                    //     ]
+                    // }
                 ],
                 shipping_lines: [
                     {
